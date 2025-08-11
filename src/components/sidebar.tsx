@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export default function AppSidebar() {
   return (
-    <Sidebar className="bg-slate-900 text-white border-none">
+    <Sidebar className="bg-slate-900 border-none">
       <SidebarHeader>
         <SidebarMenu className="flex flex-row border-b-1 pb-3 pt-3 border-slate-800 items-center">
           <SidebarMenuItem>
