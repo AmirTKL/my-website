@@ -32,7 +32,7 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar />
           <main>
-            <SidebarTrigger className="bg-slate-900 rounded-l-none" />
+            <SidebarTrigger className="bg-slate-900 rounded-l-none hover:bg-slate-700" />
             {children}
           </main>
         </SidebarProvider>
