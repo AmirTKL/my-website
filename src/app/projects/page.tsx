@@ -2,10 +2,26 @@ import ProjectCard from "@/components/project-card";
 
 export default function Projects() {
   return (
-    <div className="grid grid-flow-row grid-cols-2 gap-10 m-10 mx-20">
+    <div className="grid grid-flow-row xl:grid-cols-2 grid-cols-1 gap-10 m-10 mx-20">
       <ProjectCard
         title="Telegram Helper"
         images={[
+          {
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
+            id: "project one image ones",
+          },
+          {
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
+            id: "project one image twos",
+          },
+          {
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
+            id: "project one image oned",
+          },
+          {
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
+            id: "project one image twod",
+          },
           {
             src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
             id: "project one image one",

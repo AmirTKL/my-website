@@ -5,6 +5,13 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 export default function ProjectCard({
   title,
@@ -22,10 +29,23 @@ export default function ProjectCard({
         <CardDescription className="text-2xl">{children}</CardDescription>
       </CardHeader>
       <CardContent>
-        {/* {supposed to be a carousel} */}
-        {images.map((image) => {
-          return <img key={image.id} src={image.src}></img>;
-        })}
+        <Carousel
+          opts={{
+            align: "center",
+          }}
+        >
+          <CarouselContent className="">
+            {images.map((image) => {
+              return (
+                <CarouselItem key={image.id} className="xl:basis-1/2 md:basis-1/3 sm:basis-1/2 basis-1/1">
+                  <img src={image.src}></img>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </CardContent>
     </Card>
   );
