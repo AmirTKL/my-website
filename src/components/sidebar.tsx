@@ -11,8 +11,6 @@ import {
 } from "./ui/sidebar";
 import Link from "next/link";
 import { BsGithub, BsTwitterX } from "react-icons/bs";
-import { LuGithub } from "react-icons/lu";
-import { RiGithubLine, RiTwitterXLine } from "react-icons/ri";
 
 export default function AppSidebar() {
   return (
