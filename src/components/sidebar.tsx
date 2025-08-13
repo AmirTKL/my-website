@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   Sidebar,
   SidebarContent,
@@ -11,6 +10,9 @@ import {
   SidebarMenuItem,
 } from "./ui/sidebar";
 import Link from "next/link";
+import { BsGithub, BsTwitterX } from "react-icons/bs";
+import { LuGithub } from "react-icons/lu";
+import { RiGithubLine, RiTwitterXLine } from "react-icons/ri";
 
 export default function AppSidebar() {
   return (
@@ -63,12 +65,16 @@ export default function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <SidebarMenu className="flex flex-row gap-2 p-2 border-slate-500 justify-center">
+        <SidebarMenu className="flex flex-row gap-5 p-2 border-slate-500 justify-center">
           <SidebarMenuItem>
-            <SidebarMenuButton className="text-2xl">Git</SidebarMenuButton>
+            <Link href="https://github.com/AmirTKL">
+              <BsGithub className="w-7 h-7 text-blue-400"></BsGithub>
+            </Link>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarMenuButton className="text-2xl">X</SidebarMenuButton>
+            <Link href="https://x.com/AmirrezaZamani_">
+              <BsTwitterX className="w-7 h-7 text-blue-400"></BsTwitterX>
+            </Link>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
