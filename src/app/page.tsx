@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="m-10">
       <div className="flex flex-col gap-5">
-        <h1 className="text-4xl">Hello! I'm Amir,</h1>
+        <h1 className="text-4xl">Hello! I&apos;m Amir,</h1>
         <div>
           <h2 className="text-2xl">
             Mainly a junior full-stack web developer.
@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <Skeleton />
       <h4>Click & drag the skelly to rotate his boney ass</h4>
-      <h5>Also, if the animation has any bugs (especially the teeth), refresh the page. If the bug persists, it's a feature probably</h5>
+      <h5>Also, if the animation has any bugs (especially the teeth), refresh the page. If the bug persists, it&apos;s a feature probably</h5>
       <h1 className="text-3xl">Feel free to contact and ask me questions through <Link className="text-blue-200" href={"https://x.com/AmirrezaZamani_"}>X @AmirrezaZamani_</Link> <br /> or email me at amirkhafane87@gmail.com</h1>
     </div>
   );

@@ -5,7 +5,6 @@ import * as THREE from "three";
 import { OrbitControls, GLTFLoader } from "three/examples/jsm/Addons.js";
 
 export default function Skeleton() {
-  try {
     const myThreeCanvas = useRef(null);
     useEffect(() => {
       const scene = new THREE.Scene();
@@ -82,7 +81,4 @@ export default function Skeleton() {
         <canvas id="myThreeCanvas" ref={myThreeCanvas} />
       </div>
     );
-  } catch (error) {
-    console.log(error);
-  }
 }

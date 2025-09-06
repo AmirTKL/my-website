@@ -29,7 +29,7 @@ export default function Projects() {
         Telegram-Helper is a telegram bot specializing in communication via an
         AI powered by OpenAI, setting reminders, forecasting the weather,
         sending locations, playing Tic-Tac-Toe with another person using
-        Telegram's inline-mode, and most importantly, sending dog photos!
+        Telegram&apos;s inline-mode, and most importantly, sending dog photos!
       </ProjectCard>
       <ProjectCard
         title="Steam Tool (WIP)"
