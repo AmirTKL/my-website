@@ -51,13 +51,6 @@ export default function AppSidebar() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               </Link>
-              <SidebarMenuItem>
-                <Link href="/about">
-                  <SidebarMenuButton className="text-xl hover:bg-slate-800 active:bg-slate-700">
-                    About Me
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

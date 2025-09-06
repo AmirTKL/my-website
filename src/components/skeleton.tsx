@@ -4,14 +4,14 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls, GLTFLoader } from "three/examples/jsm/Addons.js";
 
-export default function ThreeJsTest() {
+export default function Skeleton() {
   try {
     const myThreeCanvas = useRef(null);
     useEffect(() => {
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(
-        70,
-        window.innerWidth / window.innerHeight,
+        65,
+        2,
         0.1,
         1000
       );
@@ -24,12 +24,12 @@ export default function ThreeJsTest() {
       camera.position.setZ(-2);
 
       const skull = new GLTFLoader();
-
       let mixer: THREE.AnimationMixer;
       skull.load(
         "/skull.glb",
         (gltf) => {
           const model = gltf.scene;
+          model.position.setY(0.15)
           scene.add(model);
           mixer = new THREE.AnimationMixer(model);
           const clips = gltf.animations;
@@ -50,10 +50,12 @@ export default function ThreeJsTest() {
       // cube.rotateY(34);
       // cube.rotateZ(34);
 
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
-      const pointLight = new THREE.PointLight(0xffffff);
-      pointLight.position.set(2, 2, 0);
-      scene.add(ambientLight, pointLight);
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.15);
+      const pointLightFirst = new THREE.PointLight(0xffffff);
+      const pointLightSecond = new THREE.PointLight(0xffffff);
+      pointLightFirst.position.set(-2, -2, 1);
+      pointLightSecond.position.set(1, 1, -2);
+      scene.add(ambientLight, pointLightFirst, pointLightSecond);
 
       // const gridHelper = new THREE.GridHelper(200, 50);
       // const lightHelper = new THREE.PointLightHelper(pointLight);

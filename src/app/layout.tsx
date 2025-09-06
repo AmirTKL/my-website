@@ -33,7 +33,7 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar />
           <main className="flex-1 items-center">
-            <SidebarTrigger className="bg-slate-900 rounded-l-none hover:bg-slate-700" />
+            <SidebarTrigger className="bg-slate-900 rounded-l-none hover:bg-slate-700 fixed" />
             <div className="text-center">{children}</div>
           </main>
         </SidebarProvider>

@@ -9,38 +9,32 @@ export default function Projects() {
         example="https://github.com/AmirTKL/telegram-helper"
         images={[
           {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project one image ones",
+            src: "Telegram-example-1.jpg",
+            id: "telegram helper image 1",
           },
           {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project one image twos",
+            src: "Telegram-example-2.jpg",
+            id: "telegram helper image 2",
           },
           {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project one image oned",
+            src: "Telegram-example-3.jpg",
+            id: "telegram helper image 3",
           },
           {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project one image twod",
-          },
-          {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project one image one",
-          },
-          {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project one image two",
+            src: "Telegram-example-4.jpg",
+            id: "telegram helper image 4",
           },
         ]}
       >
         Telegram-Helper is a telegram bot specializing in communication via an
         AI powered by OpenAI, setting reminders, forecasting the weather,
-        playing Tic-Tac-Toe with another person using Telegram's inline-mode,
-        and most importantly, sending dog photos!
+        sending locations, playing Tic-Tac-Toe with another person using
+        Telegram's inline-mode, and most importantly, sending dog photos!
       </ProjectCard>
       <ProjectCard
-        title="Second Title"
+        title="Steam Tool (WIP)"
+        link="https://github.com/AmirTKL/steam-tool"
+        example="https://github.com/AmirTKL/steam-tool"
         images={[
           {
             src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
@@ -52,37 +46,9 @@ export default function Projects() {
           },
         ]}
       >
-        This is the second project's description
-      </ProjectCard>
-      <ProjectCard
-        title="Third Title"
-        images={[
-          {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project three image one",
-          },
-          {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project three image two",
-          },
-        ]}
-      >
-        This is the third project's description
-      </ProjectCard>
-      <ProjectCard
-        title="Fourth Title"
-        images={[
-          {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project four image one",
-          },
-          {
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s",
-            id: "project four image two",
-          },
-        ]}
-      >
-        This is the fourth project's description
+        Steam tool is an app for fetching and showing the trending games on
+        steam, then representing them in their own pages and linking them to
+        steam.
       </ProjectCard>
     </div>
   );
