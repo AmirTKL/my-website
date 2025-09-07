@@ -21,7 +21,8 @@ export default function AppSidebar() {
             <img
               className="rounded-2xl size-12"
               src={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s"
+                "https://avatars.githubusercontent.com/u/82081710?v=4"
+                // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkBg6PoHeYk2FzdAertw2vl6xJJ2T8FgP0A&s"
               }
               alt="Profile Picture"
             ></img>
