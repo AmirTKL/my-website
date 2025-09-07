@@ -5,80 +5,79 @@ import * as THREE from "three";
 import { OrbitControls, GLTFLoader } from "three/examples/jsm/Addons.js";
 
 export default function Skeleton() {
-    const myThreeCanvas = useRef(null);
-    useEffect(() => {
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(
-        65,
-        2,
-        0.1,
-        1000
-      );
-      const renderer = new THREE.WebGLRenderer({
-        canvas: myThreeCanvas.current!,
-        alpha: true,
-      });
-      renderer.setSize(480, 240);
-      // renderer.setSize(window.innerWidth, window.innerHeight);
-      camera.position.setZ(-2);
-
-      const skull = new GLTFLoader();
-      let mixer: THREE.AnimationMixer;
-      skull.load(
-        "/skull.glb",
-        (gltf) => {
-          const model = gltf.scene;
-          model.position.setY(0.15)
-          scene.add(model);
-          mixer = new THREE.AnimationMixer(model);
-          const clips = gltf.animations;
-          // const clip = THREE.AnimationClip.findByName(clips, "HeadWobble");
-          // const action = mixer.clipAction(clip!);
-          // action.play();
-          clips.forEach((clip) => {
-            const action = mixer.clipAction(clip);
-            action.play();
-          });
-        },
-        undefined,
-        (error) => console.log(error)
-      );
-      // const cube = new THREE.Mesh(geometry, material);
-      // scene.add(cube);
-      // cube.rotateX(34);
-      // cube.rotateY(34);
-      // cube.rotateZ(34);
-
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.15);
-      const pointLightFirst = new THREE.PointLight(0xffffff);
-      const pointLightSecond = new THREE.PointLight(0xffffff);
-      pointLightFirst.position.set(-2, -2, 1);
-      pointLightSecond.position.set(1, 1, -2);
-      scene.add(ambientLight, pointLightFirst, pointLightSecond);
-
-      // const gridHelper = new THREE.GridHelper(200, 50);
-      // const lightHelper = new THREE.PointLightHelper(pointLight);
-      // scene.add(gridHelper, lightHelper);
-
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.enableZoom = false;
-      controls.enablePan = false;
-
-      const clock = new THREE.Clock();
-      function animate() {
-        requestAnimationFrame(animate);
-        if (mixer) {
-          mixer.update(clock.getDelta());
-        }
-        controls.update();
-        renderer.render(scene, camera);
-      }
-      animate();
+  const myThreeCanvas = useRef(null);
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(65, 2, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({
+      canvas: myThreeCanvas.current!,
+      alpha: true,
     });
+    // renderer.setSize(480, 240);
+    if (window.innerWidth < 480) {
+      renderer.setSize(window.innerWidth / 1.25, window.innerWidth / 2.5);
+    } else {
+      renderer.setSize(window.innerWidth / 2, window.innerWidth / 4);
+    }
+    camera.position.setZ(-2);
 
-    return (
-      <div className="flex justify-center">
-        <canvas id="myThreeCanvas" ref={myThreeCanvas} />
-      </div>
+    const skull = new GLTFLoader();
+    let mixer: THREE.AnimationMixer;
+    skull.load(
+      "/skull.glb",
+      (gltf) => {
+        const model = gltf.scene;
+        model.position.setY(0.15);
+        scene.add(model);
+        mixer = new THREE.AnimationMixer(model);
+        const clips = gltf.animations;
+        // const clip = THREE.AnimationClip.findByName(clips, "HeadWobble");
+        // const action = mixer.clipAction(clip!);
+        // action.play();
+        clips.forEach((clip) => {
+          const action = mixer.clipAction(clip);
+          action.play();
+        });
+      },
+      undefined,
+      (error) => console.log(error)
     );
+    // const cube = new THREE.Mesh(geometry, material);
+    // scene.add(cube);
+    // cube.rotateX(34);
+    // cube.rotateY(34);
+    // cube.rotateZ(34);
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.15);
+    const pointLightFirst = new THREE.PointLight(0xffffff);
+    const pointLightSecond = new THREE.PointLight(0xffffff);
+    pointLightFirst.position.set(-2, -2, 1);
+    pointLightSecond.position.set(1, 1, -2);
+    scene.add(ambientLight, pointLightFirst, pointLightSecond);
+
+    // const gridHelper = new THREE.GridHelper(200, 50);
+    // const lightHelper = new THREE.PointLightHelper(pointLight);
+    // scene.add(gridHelper, lightHelper);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = false;
+    controls.enablePan = false;
+
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      if (mixer) {
+        mixer.update(clock.getDelta());
+      }
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+  });
+
+  return (
+    <div className="flex justify-center">
+      <canvas id="myThreeCanvas" ref={myThreeCanvas} />
+    </div>
+  );
 }
