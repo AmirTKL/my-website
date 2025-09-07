@@ -2,7 +2,7 @@ import ProjectCard from "@/components/project-card";
 
 export default function Projects() {
   return (
-    <div className="grid grid-flow-row xl:grid-cols-2 grid-cols-1 gap-10 m-10 mx-20">
+    <div className="grid grid-flow-row xl:grid-cols-2 grid-cols-1 gap-10 m-10 mx-5 xl:mx-20 l:mx-15">
       <ProjectCard
         title="Telegram Helper"
         link="https://github.com/AmirTKL/telegram-helper"
